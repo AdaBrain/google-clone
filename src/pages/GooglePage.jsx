@@ -1,7 +1,17 @@
+import "../static/css/googlePage.css"
+
 // Simple loop in React
 const MyLoop = () => {
   let data = [1, 2, 3, 4, 5]
-  return data.map( d => <li key={d}>{d}. Ada</li>)
+  return data.map( (d, idx) => (
+    <ul>
+      {
+        idx % 2 === 0
+        ? <li className="green" key={d}>{d}. Ada</li>
+        : <li className="red" key={d}>{d}. Ada</li>
+      } 
+    </ul>  
+  ))
 };
 
 const movies = [
@@ -18,8 +28,8 @@ const MovieRender = props => {
       <h1>Movie name: {d.name}</h1>
       { 
         d.rating >= 4
-        ? <h2>Rating: {d.rating}</h2>
-        : <h2>Rating: BAD! {d.rating}</h2>
+        ? <h2 className="green" >Rating: {d.rating}</h2>
+        : <h2 className="red" >Rating: BAD! {d.rating}</h2>
       }
     </div>
   ))
