@@ -3,7 +3,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <GooglePage title="Google by Adabrain"/>
     </div>
   );

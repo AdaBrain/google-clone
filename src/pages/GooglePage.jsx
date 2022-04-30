@@ -1,7 +1,29 @@
+// Simple loop in React
 const MyLoop = () => {
   let data = [1, 2, 3, 4, 5]
   return data.map( d => <li key={d}>{d}. Ada</li>)
 };
+
+const movies = [
+  {'name': 'The Matrix', 'rating': 5},
+  {'name': 'Starwars III', 'rating': 5},
+  {'name': 'The Social Network', 'rating': 4.5},
+  {'name': 'Faster', 'rating': 2},
+  {'name': 'SourceCode', 'rating': 3.5},
+]
+
+const MovieRender = props => {
+  return props.data.map( d => (
+    <div className="movie-items" key={d.name}>
+      <h1>Movie name: {d.name}</h1>
+      { 
+        d.rating >= 4
+        ? <h2>Rating: {d.rating}</h2>
+        : <h2>Rating: BAD! {d.rating}</h2>
+      }
+    </div>
+  ))
+}
 
 const GooglePage = (props) => {
   let modTitle = "Ada: " + props.title;
@@ -13,7 +35,8 @@ const GooglePage = (props) => {
       <h2>{modTitle}</h2>
 
       <MyLoop />
-
+      <br />
+      <MovieRender data={movies} />
     </div>
   );
 };
