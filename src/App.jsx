@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <GooglePage />
+      <GooglePage title="Google by Adabrain"/>
     </div>
   );
 }
