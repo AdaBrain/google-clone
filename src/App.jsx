@@ -1,5 +1,5 @@
-import GooglePage from './pages/GooglePage.jsx'
-import './App.css';
+import GooglePage from "./pages/GooglePage.jsx";
+import "./App.css";
 
 function App() {
   return (
